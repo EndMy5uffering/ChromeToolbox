@@ -3,7 +3,13 @@
     "name": "LittleToolBox",
     "version": "0",
     "description": "A small tool box :D",
-    "permissions": ["storage", "tabs"],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": ["https://*/*"],
     "icons": {
         "16": "res/icon16.png",
         "32": "res/icon32.png",
@@ -12,7 +18,7 @@
       },
     "content_scripts": [
       {
-        "matches": ["https://*/*"],
+        "matches": ["<all_urls>"],
         "js": ["toolbox.js"]
       }
     ],
