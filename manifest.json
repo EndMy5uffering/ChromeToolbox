@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "LittleToolBox",
+    "version": "0",
+    "description": "A small tool box :D",
+    "permissions": ["storage", "tabs"],
+    "icons": {
+        "16": "res/icon16.png",
+        "32": "res/icon32.png",
+        "48": "res/icon48.png",
+        "128": "res/icon128.png"
+      },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*"],
+        "js": ["toolbox.js"]
+      }
+    ],
+    "action": {
+      "default_title": "LittleToolBox",
+      "default_popup": "popup.html"
+    }
+}
